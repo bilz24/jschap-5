@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //1     JS Literal Notation for array
+        let studentName = [];
+        //2     JS Object Notation for array
+        let StudentNames = new Array();
+        //3
+        let fruits = ["Apple", "Banana", "Mango"];
+        //4
+        let numbers = [10, 20, 30, 40, 50];
+        //5
+        let booleanArray = [true, false, true];
+        //6
+        let mixedArray = ["Hello", 42, true, [1, 2, 3]];
+        //7
+        let qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+        document.write("<h2>Qualifications:</h2>")
+        document.write("<ol>")
+        for(i=0; i<qualifications.length; i++){
+            document.write("<li>"+qualifications[i]+"</li>")
+        }
+        document.write("</ol>")
+
+        //8
+        let studentNames = ["Ali", "Ahmed", "Sara"];
+        let scores = [420, 380, 450];
+        let totalMarks = 500;
+
+        for (let i = 0; i < studentNames.length; i++) {
+            let percentage = (scores[i] / totalMarks) * 100;
+            document.write("Score of " + studentNames[i] + " is " + scores[i] + ". Percentage: " + percentage + "%<br>");
+        }
+        //9
+        let colors = ["Red", "Green", "Blue"];
+
+        // a. Add color to the beginning
+        let colorStart = prompt("Enter color to add at the beginning:");
+        colors.unshift(colorStart);
+        document.write("Updated Array (a): " + colors + "<br>");
+
+        // b. Add color to the end
+        let colorEnd = prompt("Enter color to add at the end:");
+        colors.push(colorEnd);
+        document.write("Updated Array (b): " + colors + "<br>");
+
+        // c. Add two colors to the beginning
+        colors.unshift("Orange", "Purple");
+        document.write("Updated Array (c): " + colors + "<br>");
+
+        // d. Delete the first color
+        colors.shift();
+        document.write("Updated Array (d): " + colors + "<br>");
+
+        // e. Delete the last color
+        colors.pop();
+        document.write("Updated Array (e): " + colors + "<br>");
+
+        // f. Add color at user-defined index
+        for ( let i = 0; i < colors.length; i++) {
+            alert("INDEX:"+ i + " Value "+colors[i])
+        }
+        let indexToAdd = +prompt("At which index do you want to add a color?");
+        let colorName = prompt("Enter color name:");
+        colors.splice(indexToAdd,0, colorName);
+        document.write("Updated Array (f): " + colors + "<br>");
+
+        // g. Delete color(s) from user-defined index
+        let indexToDelete = prompt("From which index do you want to delete color ?");
+        let numberToDelete = prompt("How many colors do you want to delete?");
+        colors.splice(indexToDelete, numberToDelete);
+        document.write("Updated Array (g): " + colors + "<br>");
+
+        //10
+        let studentScores = [320, 230, 480, 120];
+        studentScores.sort();
+        document.write("Sorted Scores: " + studentScores+"<br>");
+
+        //11
+        let cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+        let selectedCities = cities.slice(2)
+        document.write("Selected Cities: " + selectedCities + "<br>");
+
+        //12
+        let arr = ["This", "is", "my", "cat"];
+        let singleString = arr.join("  ");
+        document.write(singleString+"<br>");
+
+    //13
+    let fifoArray = [];
+    fifoArray.push("Bilal");
+    fifoArray.push("Siddiq");
+    fifoArray.push("Azlan");
+
+    document.write("FIFO Order:<br><br>");
+    document.write("Out: <br>"+fifoArray.shift() + "<br>");
+    document.write("Out: <br>"+fifoArray.shift() + "<br>");
+    document.write("Out: <br>"+fifoArray.shift() + "<br>");
+
+    //14
+    document.write("______________________________ <br>")
+    let Last_In_First_Out = [];
+    Last_In_First_Out.push("keyboard")
+    Last_In_First_Out.push("mouse")
+    Last_In_First_Out.push("printer")
+    Last_In_First_Out.push("monitor")
+
+    document.write("Out: <br>"+Last_In_First_Out.pop()+"<br>")
+    document.write("Out: <br>"+Last_In_First_Out.pop()+"<br>")
+    document.write("Out: <br>"+Last_In_First_Out.pop()+"<br>")
+    document.write("Out: <br>"+Last_In_First_Out.pop()+"<br>")
+
+    //15..
+    let phoneManufacturers = ["Apple","Samsung","Motorola","Nokia","Sony","Haier"]
+    document.write("<select>")
+    for (let i = 0; i < phoneManufacturers.length; i++) {
+        document.write("<option value ='" + phoneManufacturers[i] +"'>" + phoneManufacturers[i] + "</option>")
+        
+    }
+    document.write("</select>")
+
+    a=3
+    b=a
+    temp=b
+    </script>
+</body>
+</html>
